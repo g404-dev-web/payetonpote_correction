@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+        <meta
+        content="ie=edge" http-equiv="X-UA-Compatible">
+
+        <!--Import Google Icon Font-->
+        <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link
+        href="/assets/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+        <!--Custom styles-->
+        <link href="/assets/css/styles.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+
+
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+
+        <div class="navbar-fixed">
+            <nav class="white">
+                <div class="nav-wrapper">
+                    <a class="brand-logo center" href="/">Cagnot'Potes</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a class="waves-effect waves-light btn pink lighten-1" href="{{path('campaign_new')}}">Créer une campagne</a>
+                        </li>
+                    </ul>
+
+                    <ul class="sidenav" id="nav-mobile">
+                        <li>
+                            <a class="waves-effect waves-light btn pink lighten-1" href="{{path('campaign_new')}}">Créer une campagne</a>
+                        </li>
+                    </ul>
+                    <a class="sidenav-trigger" data-target="nav-mobile" href="#">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        {% block body %}   {% endblock %}
+
+        <footer class="page-footer teal">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Cagnot'Potes</h5>
+                        <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo.</p>
+                    </div>
+                    <div class="col l3 s12 offset-l3">
+                        <h5 class="white-text">Liens</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <a class="white-text" href="#!">Comment ça marche ?</a>
+                            </li>
+                            <li>
+                                <a class="white-text" href="#!">Voir les campagnes</a>
+                            </li>
+                            <li>
+                                <a class="white-text" href="#!">Créer une campagne</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made with love by
+                    <a class="white-text" href="http://trombi.simplon-roanne.com/">Simplon Roanne</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://js.stripe.com/v3/"></script>
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="/assets/js/materialize.min.js"></script>
+        <!--Init & custom scripts-->
+        <script src="/assets/js/scripts.js"></script>
+
+    </body>
+</html>
